@@ -1,5 +1,6 @@
 <template>   
     <div>
+        <!-- For each card bound int cardlist from the App.vue, create a card -->
         <h1>{{thetitle}}</h1>
         <div class="card-deck">
             <div v-for="card in cardlist" v-bind:key="card.id" class="card">

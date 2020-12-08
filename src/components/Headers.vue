@@ -1,4 +1,5 @@
 <template>
+<!-- very simple header -->
     <h1>{{thetitle}}</h1>
 </template>
 

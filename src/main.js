@@ -1,3 +1,8 @@
+// Isaac Kirk
+// 12/8/2020
+// Popular TV Shows
+// CIS-131-102
+
 import Vue from 'vue'
 import App from './App.vue'
 

@@ -9,6 +9,7 @@
 import 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import axios from 'axios'
+// Components
 import Header from './components/Headers.vue'
 import Card from './components/Card.vue'
 
@@ -20,14 +21,17 @@ export default {
   },
   data(){
     return {
+      // Stores the TV shows
       cardList: []
     }
   },
   mounted(){
+    // Uses axios to send request to the api and get the array of popular tv shows
     axios.get("https://api.themoviedb.org/3/tv/popular?api_key=5c121df8e93b22adde3c392246600b79&language=en-US&page=1")
             .then ((response) =>
             {
                 if(response.status == 200){
+                  // Adds 4 TV shows if successful
                     for(let i = 0; i < 4; i++){
                         response.data.results[i].poster_path = "https://image.tmdb.org/t/p/w500" + response.data.results[i].poster_path;
                         this.cardList.push(response.data.results[i]);
